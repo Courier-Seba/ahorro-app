@@ -1,3 +1,19 @@
+<template>
+  <Titulo></Titulo>
+</template>
+
+<script>
+import Titulo from './components/Titulo.vue'
+
+export default {
+  name: 'app',
+  components: {
+    Titulo
+  }
+}
+</script>
+
+<style>
 * { padding: 0; margin: 0; }
 
 #app {
@@ -16,5 +32,4 @@
 input {
     grid-row: 3;
 }
-
-
+</style>
