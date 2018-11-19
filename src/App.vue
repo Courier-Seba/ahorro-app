@@ -1,14 +1,19 @@
 <template>
+<div id="main">
   <Titulo></Titulo>
+  <Datos></Datos>
+</div>
 </template>
 
 <script>
 import Titulo from './components/Titulo.vue'
+import Datos from './components/Datos.vue'
 
 export default {
   name: 'app',
   components: {
-    Titulo
+    Titulo,
+    Datos
   }
 }
 </script>
@@ -20,16 +25,6 @@ export default {
     text-align: center;
     display: grid;
     grid-template-rows: 40px; 
-    grid-gap: 5px;
 }
 
-#titulo {
-    grid-row: 1 / 3;
-    color: #000000;
-    background-color: lightblue;
-}
-
-input {
-    grid-row: 3;
-}
 </style>
