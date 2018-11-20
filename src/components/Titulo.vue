@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'Titulo',
+  name: 'TituloPrincipal',
 }
 </script>
 
@@ -14,6 +14,8 @@ export default {
 h1 {
     grid-row: 1 / 3;
     color: #000000;
-    background-color: lightblue;
+    background-color: blue;
 }
+
+
 </style>

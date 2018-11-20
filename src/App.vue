@@ -1,30 +1,33 @@
 <template>
 <div id="main">
-  <Titulo></Titulo>
-  <Datos></Datos>
+  <TituloPrincipal></TituloPrincipal>
+  <IngresoDatos></IngresoDatos>
 </div>
 </template>
 
 <script>
-import Titulo from './components/Titulo.vue'
-import Datos from './components/Datos.vue'
+import TituloPrincipal from "./components/Titulo.vue";
+import IngresoDatos from "./components/Datos.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    Titulo,
-    Datos
+    TituloPrincipal,
+    IngresoDatos
   }
-}
+};
 </script>
 
 <style>
-* { padding: 0; margin: 0; }
 
-#app {
-    text-align: center;
-    display: grid;
-    grid-template-rows: 40px; 
+* {
+  padding: 0;
+  margin: 0;
 }
 
+#app {
+  text-align: center;
+  display: grid;
+  grid-template-rows: 40px;
+}
 </style>

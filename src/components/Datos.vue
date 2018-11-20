@@ -1,20 +1,25 @@
 <template>
 <div id="datos">
-    <label>
-        Ingrese su ganancia por dia
-        <input type="text" id="ganancia" v-model="ganancia" placeholder="0">
-    </label>
-    <br>
-    <label>
-        Ingrese el monto buscado
+    <label id="maximo">
+        Ingrese el monto buscado:
         <input type="text" id="busca" v-model="busca" placeholder="0">
     </label>
+    <hr>
+    <IngresoGanancia></IngresoGanancia>
+
 </div>  
 </template>
 
 <script>
+import IngresoGanancia from "./Ganancia.vue"
+
 export default {
-    name: "Datos",
+    name: "IngresoDatos",
+
+    components: {
+        IngresoGanancia
+    },
+
     data: function() { 
         return {
             ganancia: 0,
@@ -30,18 +35,21 @@ export default {
 </script>
 
 <style scoped>
+
+
 #datos {
+    text-align: center;
     display: grid;
     grid-gap: 5px;
+    background-color: lightblue;
 }
 
-input {
-    border-color: blue;
-    border-width: 1px;
-}
-
-label {
+#maximo {
     grid-row: 1;
+}
+
+#datos {
+    grid-row: 2;
 }
 
 </style>
