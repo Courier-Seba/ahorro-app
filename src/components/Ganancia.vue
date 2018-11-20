@@ -1,11 +1,11 @@
 <template>
     <div id="ganancia">
-        <label for="formaGananca">Su ingreso por: </label>
-    
-        <select id="formaGanancia" v-model="eleccion">
-            <option>Por día</option>
-            <option>Por mes</option>
-            <option>Por año</option>
+        <label>Su ingreso por: </label>
+
+        <select v-model="eleccion">
+            <option value="d">Por día</option>
+            <option value="m">Por mes</option>
+            <option value="a">Por año</option>
         </select>
 
         <input type="text" v-model="ganancia" placeholder="0">
@@ -23,11 +23,24 @@ export default {
         }
     },
 
+    watch: {
+        eleccion: function()  {
+            console.log(this.eleccion);
+        },
+        ganancia: function() {
+            this.ganancia = Number(this.ganancia);
+            console.log(this.ganancia);
+        }
+    },
+
 }
 </script>
 
 <style scoped>
 
+select {
+    margin: 5px;
+}
 </style>
 
 

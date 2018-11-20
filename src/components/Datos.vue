@@ -5,10 +5,8 @@
         <input type="text" id="busca" v-model="busca" placeholder="0">
     </label>
     <hr>
-    <IngresoGanancia></IngresoGanancia>
+    <ingreso-ganancia></ingreso-ganancia>
     <ingreso-porcentaje></ingreso-porcentaje>
-
-
 </div>  
 </template>
 
@@ -32,14 +30,14 @@ export default {
 
     watch: {
         busca: function() {
-            console.log(busca)
+            this.busca = Number(this.busca  )
+            console.log(this.busca)
         }
     }
 }
 </script>
 
 <style scoped>
-
 
 #datos {
     text-align: center;

@@ -1,7 +1,9 @@
 <template>
     <div id="ganancia">
-        <label for="formaGananca">Porcentaje a usar: </label>
-        <input type="text" id="inputPorcentaje" v-model="porc" placeholder="0">
+        <label for="formaGananca"> 
+            Porcentaje a usar: 
+            <input type="text" id="inputPorcentaje" v-model="porc" placeholder="0">
+        </label>
     </div>
 </template>
 
