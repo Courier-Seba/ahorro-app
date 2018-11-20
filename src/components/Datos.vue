@@ -6,29 +6,33 @@
     </label>
     <hr>
     <IngresoGanancia></IngresoGanancia>
+    <ingreso-porcentaje></ingreso-porcentaje>
+
 
 </div>  
 </template>
 
 <script>
-import IngresoGanancia from "./Ganancia.vue"
+import IngresoGanancia from "./Ganancia.vue";
+import IngresoPorcentaje from "./Porcentaje.vue"
 
 export default {
     name: "IngresoDatos",
 
     components: {
-        IngresoGanancia
+        IngresoGanancia,
+        IngresoPorcentaje
     },
 
-    data: function() { 
+    data() { 
         return {
-            ganancia: 0,
             busca: 0
         }
     },
+
     watch: {
-        ganancia: function() {
-            console.log(this.ganancia)
+        busca: function() {
+            console.log(busca)
         }
     }
 }

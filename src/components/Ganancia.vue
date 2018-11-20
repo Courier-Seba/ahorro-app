@@ -1,12 +1,14 @@
 <template>
     <div id="ganancia">
         <label for="formaGananca">Su ingreso por: </label>
-        <select id="formaGanancia">
-            <option value="dia">Por día</option>
-            <option value="mes">Por mes</option>
-            <option value="año">Por año</option>
+    
+        <select id="formaGanancia" v-model="eleccion">
+            <option>Por día</option>
+            <option>Por mes</option>
+            <option>Por año</option>
         </select>
-        <input type="text" id="ganancia" v-model="ganancia" placeholder="0">
+
+        <input type="text" v-model="ganancia" placeholder="0">
     </div>
 </template>
 
@@ -14,8 +16,11 @@
 export default {
     name: 'IngresoGanancia',
 
-    data() {
-        eleccio: "";
+    data: function() {
+        return {
+            eleccion: "",
+            ganancia: ""
+        }
     },
 
 }
