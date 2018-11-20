@@ -5,8 +5,15 @@
         <input type="text" id="busca" v-model="busca" placeholder="0">
     </label>
     <hr>
-    <ingreso-ganancia></ingreso-ganancia>
-    <ingreso-porcentaje></ingreso-porcentaje>
+    <ingreso-ganancia 
+        @recibeTiempo="acumTiempo"
+        @recibeGanancia="acumGanancia"
+    >
+    </ingreso-ganancia>
+    <ingreso-porcentaje
+        @recibePorcentaje="acumPorc"
+    >
+    </ingreso-porcentaje>
 </div>  
 </template>
 
@@ -22,17 +29,34 @@ export default {
         IngresoPorcentaje
     },
 
-    data() { 
+    data() {
         return {
-            busca: 0
+            busca: 0,
+            tiempo: "",
+            ganancia: 0,
+            porcentaje: 0
+
+        }
+    },
+
+    methods: {
+        acumTiempo: function(payload) {
+            this.tiempo = payload;
+        },
+
+        acumGanancia: function(payload) {
+            this.ganancia = payload;
+        },
+
+        acumPorc: function(payload) {
+            this.porcentaje = payload;
         }
     },
 
     watch: {
         busca: function() {
-            this.busca = Number(this.busca  )
-            console.log(this.busca)
-        }
+            this.busca = Number(this.busca)
+        },
     }
 }
 </script>
