@@ -1,5 +1,5 @@
 <template>
-    <div id="ganancia">
+    <div id="porcentaje">
         <label> 
             Porcentaje a usar: 
             <input type="text" id="inputPorcentaje" v-model="porc" placeholder="0">
@@ -20,7 +20,7 @@ export default {
     watch: {
         porc: function() {
             this.porc = Number(this.porc)
-            this.$emit('recibePorcentaje', this.porc)
+            this.$emit('pasaPorcentaje', this.porc)
         }
     }
 }

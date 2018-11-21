@@ -25,11 +25,11 @@ export default {
 
     watch: {
         eleccion: function()  {
-            this.$emit('recibeTiempo', this.eleccion);
+            this.$emit('pasaTiempo', this.eleccion);
         },
         ganancia: function() {
             this.ganancia = Number(this.ganancia);
-            this.$emit('recibeGanancia',this.ganancia);
+            this.$emit('pasaGanancia',this.ganancia);
         }
     },
 

@@ -6,12 +6,12 @@
     </label>
     <hr>
     <ingreso-ganancia 
-        @recibeTiempo="acumTiempo"
-        @recibeGanancia="acumGanancia"
+        @pasaTiempo="acumTiempo"
+        @pasaGanancia="acumGanancia"
     >
     </ingreso-ganancia>
     <ingreso-porcentaje
-        @recibePorcentaje="acumPorc"
+        @pasaPorcentaje="acumPorc"
     >
     </ingreso-porcentaje>
 </div>  
@@ -19,7 +19,7 @@
 
 <script>
 import IngresoGanancia from "./Ganancia.vue";
-import IngresoPorcentaje from "./Porcentaje.vue"
+import IngresoPorcentaje from "./Porcentaje.vue";
 
 export default {
     name: "IngresoDatos",
@@ -42,15 +42,34 @@ export default {
     methods: {
         acumTiempo: function(payload) {
             this.tiempo = payload;
+            this.pasaDatos();
         },
 
         acumGanancia: function(payload) {
             this.ganancia = payload;
+            this.pasaDatos();
+
         },
 
         acumPorc: function(payload) {
             this.porcentaje = payload;
-        }
+            this.pasaDatos();
+        },
+    
+        pasaDatos: function() {
+            if ((this.busca > 0) && (this.ganancia > 0))  {
+                if ((this.porcentaje > 0) && (this.porcentaje <= 100)) {
+                    let payload = {
+                        buscado: this.busca,
+                        ganancia: this.ganancia,
+                        porcentaje: this.porcentaje,
+                        tiempo: this.tiempo
+                    };
+                    this.$emit('pasaDatos', payload);
+                }
+            }
+        },
+
     },
 
     watch: {
