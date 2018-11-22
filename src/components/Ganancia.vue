@@ -3,9 +3,9 @@
         <label>Su ingreso por: </label>
 
         <select v-model="eleccion">
-            <option value="d">Por día</option>
-            <option value="m">Por mes</option>
-            <option value="a">Por año</option>
+            <option value="dia">Por día</option>
+            <option value="mes">Por mes</option>
+            <option value="año">Por año</option>
         </select>
 
         <input type="text" v-model="ganancia" placeholder="0">
