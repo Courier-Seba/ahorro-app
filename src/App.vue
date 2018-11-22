@@ -46,9 +46,13 @@ export default {
 	margin: 0;
 }
 
-#app {
-	text-align: center;
-	display: grid;
-	grid-template-rows: 40px;
+body {
+	background-color: #eeeeee ;
+}
+
+#main {
+	margin: 5%;
+	border-color: darkslategray;
+	border-style: inset;
 }
 </style>

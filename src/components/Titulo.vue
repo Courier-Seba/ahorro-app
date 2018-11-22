@@ -1,10 +1,10 @@
 <template>
-  <h1>Calculadora de Ahorro</h1>
+		<h1>Calculadora de Ahorro</h1>
 </template>
 
 <script>
 export default {
-  name: 'TituloPrincipal',
+		name: 'TituloPrincipal',
 }
 </script>
 
@@ -12,9 +12,10 @@ export default {
 <style scoped>
 
 h1 {
-    grid-row: 1 / 3;
-    color: #000000;
-    background-color: blue;
+		grid-row: 1 / 3;
+		color: #000000;
+		background-color: blue;
+		text-indent: 5px;
 }
 
 

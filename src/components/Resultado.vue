@@ -1,6 +1,7 @@
 <template>
 	<div id="resultado">
 		<h2 v-if="completo">{{ resultado }}</h2>
+		<h6 v-else>Ingrese los datos</h6>
 	</div>
 </template>
 
@@ -43,5 +44,16 @@ export default {
 </script>
 
 <style>
+#resultado {
+	text-align: center;
+	padding: 2%;
+	background-color: #5588FF
+}
 
+h6 {
+	color: #333333;
+	border-color: black;
+	border-style: solid;
+	border-width: 1px;
+}
 </style>
